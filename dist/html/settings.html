@@ -39,6 +39,33 @@
         </md-card-content>
     </md-card>
 
+    <!-- Analytics opt-out zone -->
+    <md-card flex="100" flex-offset-gt-md="15" flex-gt-md="70">
+        <md-card-header class="md-primary">
+            <md-card-avatar>
+                <md-icon md-svg-icon="information-outline"></md-icon>
+            </md-card-avatar>
+            <md-card-header-text class="md-title-only" layout-align="center start">
+                <h2 class="md-title">Analytics opt-out</h2>
+            </md-card-header-text>
+        </md-card-header>
+        <md-card-content>
+            <md-list>
+                <md-list-item class="md-2-line">
+                    <div class="md-list-item-text">
+                        <h3>Opt-out of Analytics</h3>
+                        <p>[TBD with Sylouuu] I use Google analytics to get feedback on this addon usage. If you want to
+                            opt-out, just check this option.</p>
+                    </div>
+
+                    <md-switch class="md-accent md-secondary" ng-model="tab_modifier.settings.analytics_opt_out"
+                               aria-label="Analytics opt-out"
+                               ng-change="tab_modifier.analyticsOptoutChanged()"></md-switch>
+                </md-list-item>
+            </md-list>
+        </md-card-content>
+    </md-card>
+
     <!-- Backup zone -->
     <md-card flex="100" flex-offset-gt-md="15" flex-gt-md="70">
         <md-card-header class="md-primary">

@@ -2,7 +2,8 @@ app.factory('TabModifier', ['Rule', function (Rule) {
     
     var TabModifier = function (properties) {
         this.settings = {
-            enable_new_version_notification: false
+            enable_new_version_notification: false,
+            analytics_opt_out: false
         };
         this.rules    = [];
         
@@ -81,10 +82,18 @@ app.factory('TabModifier', ['Rule', function (Rule) {
         
         return (window.URL || window.webkitURL).createObjectURL(blob);
     };
-    
+
     TabModifier.prototype.deleteRules = function () {
         this.setModel({ rules: [] });
-        
+
+        return this;
+    };
+
+    TabModifier.prototype.analyticsOptoutChanged = function () {
+        Analytics.disableAnalytics(this.settings.analytics_opt_out);
+
+        this.sync();
+
         return this;
     };
     
