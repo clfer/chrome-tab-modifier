@@ -14,7 +14,7 @@ Take control of your tabs.
 * Unique tab *- TODO* 
 * Mute tab *- OK*
 
-Quick rename can be done by right-clicking anywhere in the page and click on "Rename Tab".  *- TODO*
+Quick rename can be done by right-clicking anywhere in the page and click on "Rename Tab".  *- OK*
 
 ## Why?
 
