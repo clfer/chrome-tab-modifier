@@ -7,14 +7,14 @@ Take control of your tabs.
 
 ## Features
 
-* Rename tab *- OK*
-* Change tab icon *- OK*
-* Pin tab *- OK*
-* Prevent tab closing - OK
-* Unique tab *- TODO* 
-* Mute tab *- OK*
+* Rename tab
+* Change tab icon
+* Pin tab
+* Prevent tab closing
+* Unique tab
+* Mute tab
 
-Quick rename can be done by right-clicking anywhere in the page and click on "Rename Tab".  *- OK*
+Quick rename can be done by right-clicking anywhere in the page and click on "Rename Tab".
 
 ## Why?
 
@@ -42,7 +42,7 @@ Install from the **[Chrome Web Store](https://chrome.google.com/webstore/detail/
 
 Also available for **[Opera Browser](https://addons.opera.com/fr/extensions/details/tab-modifier/)**.
 
-Soon available for **Firefox**, refer to [#46](https://github.com/sylouuu/chrome-tab-modifier/issues/46).
+Soon available for **Firefox**. Refer to [#46](https://github.com/sylouuu/chrome-tab-modifier/issues/46) for merge with original project and official release.
 
 ## Usage
 
