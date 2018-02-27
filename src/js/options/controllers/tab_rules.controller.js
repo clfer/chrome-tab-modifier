@@ -54,7 +54,7 @@ app.controller('TabRulesController', ['$scope', '$routeParams', '$http', '$mdDia
             }
         }).then(function (rule) {
             // Save a rule
-            tab_modifier.save(rule, index);
+            tab_modifier.save(rule, index, true);
             
             tab_modifier.sync();
             
