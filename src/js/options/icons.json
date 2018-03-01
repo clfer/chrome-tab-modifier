@@ -1,5 +1,10 @@
 [
     {
+        "category": "",
+        "name": "-none-",
+        "value": "icon-none.png"
+    },
+    {
         "category": "chrome",
         "name": "Bookmarks",
         "value": "chrome/bookmarks.png"

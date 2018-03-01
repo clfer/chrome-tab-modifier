@@ -68,6 +68,9 @@
                     <md-input-container flex="20">
                         <label>Select icon</label>
                         <md-select ng-model="rule.tab.icon">
+                            <md-option layout="row" layout-align="start center" ng-repeat="icon in icon_list | filter: { category: '' }:true | orderBy: 'name'" ng-value="icon.value">
+                                <img class="md-img-select md-icon-16x" ng-src="../img/{{ icon.value }}" alt="{{ icon.name }}"> {{ icon.name }}
+                            </md-option>
                             <md-optgroup label="Chrome">
                                 <md-option layout="row" layout-align="start center" ng-repeat="icon in icon_list | filter: { category: 'chrome' }:true | orderBy: 'name'" ng-value="icon.value">
                                     <img class="md-img-select md-icon-16x" ng-src="../img/{{ icon.value }}" alt="{{ icon.name }}"> {{ icon.name }}
@@ -91,7 +94,7 @@
                     <!-- URL Icon -->
                     <md-input-container flex-offset="5" flex="75">
                         <label for="rule_icon" class="md-body-1">Icon</label>
-                        <input id="rule_icon" type="text" ng-model="rule.tab.icon" placeholder="e.g. https://google.com/favicon.ico">
+                        <input id="rule_icon" type="text" ng-model="rule.tab.icon" placeholder="{{rule.tab.icon === 'icon-none.png' ? 'Hide existing icon' : 'e.g. https://google.com/favicon.ico'}}">
                         <span class="md-caption"><a class="md-primary" href="" ng-click="clearIcon()">Clear icon</a>. You can set a custom URL or data URI for the new icon, no local path <a class="md-primary" href="https://github.com/sylouuu/chrome-tab-modifier#local-icon-path-doesnt-work" target="_blank">accepted</a></span>
                     </md-input-container>
                 </div>

@@ -406,7 +406,7 @@ app.controller('FormModalController', ['$scope', '$mdDialog', 'rule', 'icon_list
     });
     
     $scope.$watch('rule.tab.icon', function () {
-        if (rule.tab.icon === '' || rule.tab.title === undefined) {
+        if (rule.tab.icon === '' || rule.tab.icon === undefined) {
             rule.tab.icon = null;
         }
     });
