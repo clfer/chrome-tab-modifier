@@ -108,7 +108,8 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
             if (tab_modifier === undefined) {
                 tab_modifier = {
                     settings: {
-                        enable_new_version_notification: false
+                        enable_new_version_notification: false,
+                        analytics_opt_out: false
                     },
                     rules: []
                 };

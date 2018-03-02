@@ -51,7 +51,7 @@ app.config(['$routeProvider', '$compileProvider', '$mdIconProvider', '$mdTheming
         });
     
     // Analytics config
-    AnalyticsProvider.setAccount('UA-27524593-7');
+    AnalyticsProvider.setAccount('UA-64680907-3');
     AnalyticsProvider.setHybridMobileSupport(true);
     AnalyticsProvider.setDomainName('none');
     
@@ -213,6 +213,11 @@ app.controller('SettingsController', ['$scope', '$mdDialog', '$mdToast', '$locat
             Analytics.trackEvent('tab-rules', 'delete-all');
         });
     };
+
+    $scope.analyticsSettingChanged = function (evt) {
+        tab_modifier.sync();
+        Analytics.offline(tab_modifier.settings.analytics_opt_out);
+    }
 
 }]);
 
@@ -586,14 +591,6 @@ app.factory('TabModifier', ['Rule', function (Rule) {
 
     TabModifier.prototype.deleteRules = function () {
         this.setModel({ rules: [] });
-
-        return this;
-    };
-
-    TabModifier.prototype.analyticsOptoutChanged = function () {
-        Analytics.disableAnalytics(this.settings.analytics_opt_out);
-
-        this.sync();
 
         return this;
     };

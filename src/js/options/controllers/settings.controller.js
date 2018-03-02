@@ -106,4 +106,9 @@ app.controller('SettingsController', ['$scope', '$mdDialog', '$mdToast', '$locat
         });
     };
 
+    $scope.analyticsSettingChanged = function (evt) {
+        tab_modifier.sync();
+        Analytics.offline(tab_modifier.settings.analytics_opt_out);
+    }
+
 }]);

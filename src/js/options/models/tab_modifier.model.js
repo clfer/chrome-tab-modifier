@@ -88,14 +88,6 @@ app.factory('TabModifier', ['Rule', function (Rule) {
 
         return this;
     };
-
-    TabModifier.prototype.analyticsOptoutChanged = function () {
-        Analytics.disableAnalytics(this.settings.analytics_opt_out);
-
-        this.sync();
-
-        return this;
-    };
     
     return TabModifier;
     
